@@ -41,11 +41,11 @@ class App extends Component {
 
         <Person name={this.state.persons[1].name}
                 age={this.state.persons[1].age}
-                clickToChange={this.SwitchNameHandler.bind(this, 'Rumman-from child2 comp')}>My Hobby: Playing</Person>
+                clickToChange={this.SwitchNameHandler.bind(this, 'Rumman-from child2 comp')}
+                changed={this.ChangeNameHandler}>My Hobby: Playing</Person>
 
         <Person name="Tansen"
-                age="29"
-                changed={this.ChangeNameHandler}/>
+                age="29"/>
       </div>
     );
     //return React.createElement('div', {className:'App'}, React.createElement('h1', null,'Hi, I\'m a React App'));
