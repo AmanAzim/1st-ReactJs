@@ -44,6 +44,14 @@ class App extends Component {
       this.setState({persons:neWpersons});
   };
   render() {
+    const buttonStyle={
+          backgroundColor:'green',
+          color:'white',
+          font:'inherit',
+          border:'1px solid blue',
+          padding:'8px',
+          cursor:'pointer'
+      };
     let persons=null;
 
     if(this.state.showPersons){
@@ -59,6 +67,7 @@ class App extends Component {
             }
         </div>
       );
+      buttonStyle.backgroundColor='red';
     }
 
     return (
@@ -67,7 +76,8 @@ class App extends Component {
 
         <button onClick={()=>this.SwitchNameHandler('Azim')}>Switch Name</button>
         <br></br>
-        <button onClick={this.togglePersonsHandler}>Toggle Persons</button>
+
+        <button style={buttonStyle} onClick={this.togglePersonsHandler}>Toggle Persons</button>
 
         {persons}
 
