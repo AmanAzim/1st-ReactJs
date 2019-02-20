@@ -1,5 +1,6 @@
 import React from 'react'
 import './Person.css'
+import Radium from 'radium';
 
 const person=(props)=>{
    const buttonStyle={
@@ -8,13 +9,17 @@ const person=(props)=>{
         font:'inherit',
         border:'1px solid blue',
         padding:'8px',
-       cursor:'pointer'
+        cursor:'pointer',
+        ':hover':{
+            backgroundColor: 'lightGreen',
+            color:'black'
+        }
    };
    return(
        <div >
            <p>I am {props.name} and I am {props.age} years old</p>
            <p>{props.children}</p>
-           <button style={buttonStyle} onClick={props.clickToChange}>Click to change name</button>
+           <button   onClick={props.clickToChange}>Click to change name</button>
            <br></br>
            <button style={buttonStyle} onClick={props.clickToDelete}>Click to Delete Person</button>
            <br></br>
@@ -23,4 +28,5 @@ const person=(props)=>{
    );
 };
 
-export default person;
+export default Radium(person);
+//export default person;

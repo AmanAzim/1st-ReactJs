@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Person from './Person/Person';
+import Radium, { StyleRoot } from 'radium';
 
 class App extends Component {
   state={
@@ -50,7 +51,11 @@ class App extends Component {
           font:'inherit',
           border:'1px solid blue',
           padding:'8px',
-          cursor:'pointer'
+          cursor:'pointer',
+          ':hover':{
+            backgroundColor: 'lightGreen',
+            color:'black'
+          }
       };
     let persons=null;
 
@@ -68,11 +73,28 @@ class App extends Component {
         </div>
       );
       buttonStyle.backgroundColor='red';
+      buttonStyle[':hover']={
+          backgroundColor:'salmon',
+          color:'black'
+      }
+    }
+
+    let classes1=['red', 'bold'].join(' ');
+    let classes2=[];
+    if(this.state.persons.length<=2)
+    {
+        classes2.push('red');
+    }
+    if(this.state.persons.length<=1)
+    {
+        classes2.push('bold');
     }
 
     return (
       <div className="App">
-       <h1>Persons Info</h1>
+          <h1>Persons Info</h1>
+          <p className={classes1}>This is working</p>
+          <p className={classes2.join(' ')}>This is working too</p>
 
         <button onClick={()=>this.SwitchNameHandler('Azim')}>Switch Name</button>
         <br></br>
@@ -82,20 +104,21 @@ class App extends Component {
         {persons}
 
         <hr></hr>
-        <Person name={this.state.persons[0].name}
-                age={this.state.persons[0].age}
-                clickToChange={this.SwitchNameHandler.bind(this, 'Rumman')}/>
+          <Person name={this.state.persons[0].name}
+                  age={this.state.persons[0].age}
+                  clickToChange={this.SwitchNameHandler.bind(this, 'Rumman')}/>
 
-        <Person name={this.state.persons[1].name}
-                age={this.state.persons[1].age}
-                clickToChange={this.SwitchNameHandler.bind(this, 'Rumman-from child2 comp')}
-                changed={this.ChangeNameHandler}>My Hobby: Playing</Person>
+          <Person name={this.state.persons[1].name}
+                  age={this.state.persons[1].age}
+                  clickToChange={this.SwitchNameHandler.bind(this, 'Rumman-from child2 comp')}
+                  changed={this.ChangeNameHandler}>My Hobby: Playing</Person>
 
-        <Person name="Tansen" age="29"/>
+          <Person name="Tansen" age="29"/>
       </div>
     );
     //return React.createElement('div', {className:'App'}, React.createElement('h1', null,'Hi, I\'m a React App'));
   }
 }
 
-export default App;
+export default Radium(App);
+//export default App;
