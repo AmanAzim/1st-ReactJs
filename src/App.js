@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import CssClass from './App.css';
 import './App.css';
 import Person from './Person/Person';
 //import Radium, { StyleRoot } from 'radium';
@@ -87,12 +88,12 @@ class App extends Component {
     }
     if(this.state.persons.length<=1)
     {
-        classes2.push('bold');
+        classes2.push(CssClass.bold);//classes2.push('bold');
     }
 
     return (
 
-            <div className="App">
+            <div className={CssClass.App}>
                 <h1>Persons Info</h1>
                 <p className={classes1}>This is working</p>
                 <p className={classes2.join(' ')}>This is working too</p>
@@ -115,6 +116,7 @@ class App extends Component {
                         changed={this.ChangeNameHandler}>My Hobby: Playing</Person>
 
                 <Person name="Tansen" age="29"/>
+                <div className="App body">I am global</div>
             </div>
 
     );

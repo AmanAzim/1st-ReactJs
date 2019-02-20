@@ -1,5 +1,5 @@
 import React from 'react'
-import './Person.css'
+import CssClass from './Person.css'
 //import Radium from 'radium';
 
 const person=(props)=>{
@@ -21,7 +21,7 @@ const person=(props)=>{
      //  }
   // }
    return(
-           <div className="Person" >
+           <div className={CssClass.Person} >
                <p>I am {props.name} and I am {props.age} years old</p>
                <p>{props.children}</p>
                <button  style={buttonStyle}  key={1} onClick={props.clickToChange}>Click to change name</button>
@@ -29,6 +29,7 @@ const person=(props)=>{
                <button style={buttonStyle} key={2} onClick={props.clickToDelete}>Click to Delete Person</button>
                <br></br>
                <input type="text" onChange={props.changed} value={props.name}/>
+
            </div>
    );
 };
