@@ -59,7 +59,7 @@ class App extends Component {
           }
       };*/
     let persons=null;
-
+    let btnClass='';
     if(this.state.showPersons){
       persons=(
           <div>
@@ -73,6 +73,7 @@ class App extends Component {
             }
         </div>
       );
+      btnClass=CssClass.MyBtn;
      // buttonStyle.backgroundColor='red';
       //buttonStyle[':hover']={
      //     backgroundColor:'salmon',
@@ -82,6 +83,7 @@ class App extends Component {
 
     let classes1=['red', 'bold'].join(' ');
     let classes2=[];
+
     if(this.state.persons.length<=2)
     {
         classes2.push('red');
@@ -98,10 +100,10 @@ class App extends Component {
                 <p className={classes1}>This is working</p>
                 <p className={classes2.join(' ')}>This is working too</p>
 
-                <button style={} key={1} onClick={()=>this.SwitchNameHandler('Azim')}>Switch Name</button>
+                <button  key={1} onClick={()=>this.SwitchNameHandler('Azim')}>Switch Name</button>
                 <br></br>
 
-                <button style={} key={2} onClick={this.togglePersonsHandler}>Toggle Persons</button>
+                <button className={btnClass} key={2} onClick={this.togglePersonsHandler}>Toggle Persons</button>
 
                 {persons}
 
