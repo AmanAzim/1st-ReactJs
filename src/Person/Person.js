@@ -15,16 +15,21 @@ const person=(props)=>{
             color:'black'
         }
    };
+   const personStyle={
+       '@media (min-width: 500px)':{
+           width:'450px',
+       }
+   }
    return(
-       <div >
-           <p>I am {props.name} and I am {props.age} years old</p>
-           <p>{props.children}</p>
-           <button   onClick={props.clickToChange}>Click to change name</button>
-           <br></br>
-           <button style={buttonStyle} onClick={props.clickToDelete}>Click to Delete Person</button>
-           <br></br>
-           <input type="text" onChange={props.changed} value={props.name}/>
-       </div>
+           <div className="Person" style={personStyle}>
+               <p>I am {props.name} and I am {props.age} years old</p>
+               <p>{props.children}</p>
+               <button  style={buttonStyle}  key={1} onClick={props.clickToChange}>Click to change name</button>
+               <br></br>
+               <button style={buttonStyle} key={2} onClick={props.clickToDelete}>Click to Delete Person</button>
+               <br></br>
+               <input type="text" onChange={props.changed} value={props.name}/>
+           </div>
    );
 };
 

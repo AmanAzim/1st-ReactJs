@@ -91,30 +91,32 @@ class App extends Component {
     }
 
     return (
-      <div className="App">
-          <h1>Persons Info</h1>
-          <p className={classes1}>This is working</p>
-          <p className={classes2.join(' ')}>This is working too</p>
+        <StyleRoot>
+            <div className="App">
+                <h1>Persons Info</h1>
+                <p className={classes1}>This is working</p>
+                <p className={classes2.join(' ')}>This is working too</p>
 
-        <button onClick={()=>this.SwitchNameHandler('Azim')}>Switch Name</button>
-        <br></br>
+                <button style={buttonStyle} key={1} onClick={()=>this.SwitchNameHandler('Azim')}>Switch Name</button>
+                <br></br>
 
-        <button style={buttonStyle} onClick={this.togglePersonsHandler}>Toggle Persons</button>
+                <button style={buttonStyle} key={2} onClick={this.togglePersonsHandler}>Toggle Persons</button>
 
-        {persons}
+                {persons}
 
-        <hr></hr>
-          <Person name={this.state.persons[0].name}
-                  age={this.state.persons[0].age}
-                  clickToChange={this.SwitchNameHandler.bind(this, 'Rumman')}/>
+                <hr></hr>
+                <Person name={this.state.persons[0].name}
+                        age={this.state.persons[0].age}
+                        clickToChange={this.SwitchNameHandler.bind(this, 'Rumman')}/>
 
-          <Person name={this.state.persons[1].name}
-                  age={this.state.persons[1].age}
-                  clickToChange={this.SwitchNameHandler.bind(this, 'Rumman-from child2 comp')}
-                  changed={this.ChangeNameHandler}>My Hobby: Playing</Person>
+                <Person name={this.state.persons[1].name}
+                        age={this.state.persons[1].age}
+                        clickToChange={this.SwitchNameHandler.bind(this, 'Rumman-from child2 comp')}
+                        changed={this.ChangeNameHandler}>My Hobby: Playing</Person>
 
-          <Person name="Tansen" age="29"/>
-      </div>
+                <Person name="Tansen" age="29"/>
+            </div>
+        </StyleRoot>
     );
     //return React.createElement('div', {className:'App'}, React.createElement('h1', null,'Hi, I\'m a React App'));
   }
