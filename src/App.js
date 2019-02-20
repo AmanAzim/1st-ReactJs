@@ -46,18 +46,18 @@ class App extends Component {
       this.setState({persons:neWpersons});
   };
   render() {
-    const buttonStyle={
+   /* const buttonStyle={
           backgroundColor:'green',
           color:'white',
           font:'inherit',
           border:'1px solid blue',
           padding:'8px',
           cursor:'pointer',
-        //  ':hover':{
-        //    backgroundColor: 'lightGreen',
-        //    color:'black'
-        //  }
-      };
+          ':hover':{
+            backgroundColor: 'lightGreen',
+            color:'black'
+          }
+      };*/
     let persons=null;
 
     if(this.state.showPersons){
@@ -73,7 +73,7 @@ class App extends Component {
             }
         </div>
       );
-      buttonStyle.backgroundColor='red';
+     // buttonStyle.backgroundColor='red';
       //buttonStyle[':hover']={
      //     backgroundColor:'salmon',
       ///    color:'black'
@@ -98,10 +98,10 @@ class App extends Component {
                 <p className={classes1}>This is working</p>
                 <p className={classes2.join(' ')}>This is working too</p>
 
-                <button style={buttonStyle} key={1} onClick={()=>this.SwitchNameHandler('Azim')}>Switch Name</button>
+                <button style={} key={1} onClick={()=>this.SwitchNameHandler('Azim')}>Switch Name</button>
                 <br></br>
 
-                <button style={buttonStyle} key={2} onClick={this.togglePersonsHandler}>Toggle Persons</button>
+                <button style={} key={2} onClick={this.togglePersonsHandler}>Toggle Persons</button>
 
                 {persons}
 
