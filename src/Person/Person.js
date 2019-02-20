@@ -1,6 +1,6 @@
 import React from 'react'
 import './Person.css'
-import Radium from 'radium';
+//import Radium from 'radium';
 
 const person=(props)=>{
    const buttonStyle={
@@ -10,18 +10,18 @@ const person=(props)=>{
         border:'1px solid blue',
         padding:'8px',
         cursor:'pointer',
-        ':hover':{
-            backgroundColor: 'lightGreen',
-            color:'black'
-        }
+       // ':hover':{
+       //     backgroundColor: 'lightGreen',
+       //     color:'black'
+       // }
    };
-   const personStyle={
-       '@media (min-width: 500px)':{
-           width:'450px',
-       }
-   }
+  // const personStyle={
+    //   '@media (min-width: 500px)':{
+    //       width:'450px',
+     //  }
+  // }
    return(
-           <div className="Person" style={personStyle}>
+           <div className="Person" >
                <p>I am {props.name} and I am {props.age} years old</p>
                <p>{props.children}</p>
                <button  style={buttonStyle}  key={1} onClick={props.clickToChange}>Click to change name</button>
@@ -33,5 +33,5 @@ const person=(props)=>{
    );
 };
 
-export default Radium(person);
-//export default person;
+//export default Radium(person);
+export default person;
