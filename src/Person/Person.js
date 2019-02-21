@@ -20,6 +20,10 @@ const person=(props)=>{
     //       width:'450px',
      //  }
   // }
+   const rand=Math.random();
+   if(rand>0.7){
+       throw new Error('Something went Wrong Aman!!');
+   }
    return(
            <div className={CssClass.Person} >
                <p>I am {props.name} and I am {props.age} years old</p>
