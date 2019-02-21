@@ -35,8 +35,17 @@ class App extends Component {
       console.log('[App.js] componentDidMount()');
   };
 
+  ////Update LifeCycle Hook 2
+  shouldComponentUpdate(nextProps, nextState, nextContext) {
+      console.log('[App.js] shouldComponentUpdate()');
+      return true;
+  }
+  ////Update LifeCycle Hook 6
+  componentDidUpdate(prevProps, prevState, snapshot) {
+      console.log('[App.js] componentDidUpdate()');
+  }
 
-  SwitchNameHandler=(newName)=>{
+    SwitchNameHandler=(newName)=>{
     this.setState({
       persons:[
         {id:1, name:newName, age:32},
@@ -44,7 +53,7 @@ class App extends Component {
         {id:3, name:"Tansen Khan", age:30}
       ]
     });
-  };
+   };
 
   togglePersonsHandler=()=>{
         const doesShow=this.state.showPersons;
