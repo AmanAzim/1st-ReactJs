@@ -3,6 +3,8 @@ import CssClass from './App.css';
 import './App.css';
 import Persons from '../Components/Persons/Persons';
 import Cockpit from '../Components/Cockpit/Cockpit';
+import Aux from '../HOC/Auxiliary';
+import withClass2 from '../HOC/withClass2';
 
 import ErrorBoundary from '../ErrorBoundary/ErrorBoundary';
 
@@ -99,8 +101,7 @@ class App extends Component {
 
 
     return (
-
-            <div className={CssClass.App}>
+            <Aux>
                 <button onClick={()=>{this.setState({showCockpit:!this.state.showCockpit});}}>Remove Cockpit</button>
 
                 {this.state.showCockpit ?  (<Cockpit appTitle={this.props.appTitle}
@@ -111,15 +112,11 @@ class App extends Component {
                                             /> ): null
                 }
 
-
                 {persons}
-
-            </div>
-
+            </Aux>
     );
     //return React.createElement('div', {className:'App'}, React.createElement('h1', null,'Hi, I\'m a React App'));
   }
 }
-
 //export default Radium(App);
-export default App;
+export default withClass2(App, CssClass.App);

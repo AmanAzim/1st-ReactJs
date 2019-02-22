@@ -42,15 +42,12 @@ class Persons extends PureComponent{
 
         return this.props.persons.map((person, index) => {
             return <ErrorBoundary key={person.id}>
-                <Person name={person.name}
-                        age={person.age}
-                        clickToDeletePerson={() => {
-                            this.props.clickToDelete(index)
-                        }}
-                        changedName={(event) => {
-                            this.props.changed(event, person.id)
-                        }}/>
-            </ErrorBoundary>
+                        <Person name={person.name}
+                                age={person.age}
+                                clickToDeletePerson={() => {this.props.clickToDelete(index)}}
+                                changedName={(event) => {this.props.changed(event, person.id)}}
+                        />
+                   </ErrorBoundary>
         });
     }
 };
