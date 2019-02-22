@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 //import ErrorBoundary from "../../Containers/App";
 import ErrorBoundary from '../../ErrorBoundary/ErrorBoundary'
 import Person from  './Person/Person'
 
-class Persons extends Component{
+class Persons extends PureComponent{
     ////Update LifeCycle Hook 1
     static getDerivedStateFromProps(props, state){
         console.log('[Persons.js] getDerivedStateFromProps()');
@@ -12,15 +12,15 @@ class Persons extends Component{
     ////Update LifeCycle Hook 2
     shouldComponentUpdate(nextProps, nextState) {
         console.log('[Persons.js] shouldComponentUpdate()');
-        if(nextProps.persons!==this.props.persons)
-        {
-            return true;
-        }
-        else{
-            return false;
-        }
+       if(nextProps.persons!==this.props.persons)
+          {
+             return true;
+          }
+          else{
+             return false;
+          }
     }
-    ////Update LifeCycle Hook 5
+    ////Update LifeCycle Hook 4
     getSnapshotBeforeUpdate(prevProps, prevState) {
         console.log('[Persons.js] getSnapshotBeforeUpdate()');
         return {message:'Snapshot!'};
