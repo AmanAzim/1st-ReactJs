@@ -1,7 +1,34 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import CssClass from "./Cockpit.css";
 
 const Cockpit=(props)=>{
+    //runs on any update of the component
+    useEffect(()=>{
+        console.log('[Cockpit.js] 1st useEffect()');
+        return ()=>{  console.log('[Cockpit.js] 1nd cleanup in useEffect()');};
+    });
+
+    //runs on particular property change
+    useEffect(()=>{
+        console.log('[Cockpit.js] 2nd useEffect()');
+
+        return ()=>{  console.log('[Cockpit.js] 2nd cleanup in useEffect()');}
+    }, [props.persons]);
+
+    //runs on the begining and the end
+    useEffect(()=>{
+        console.log('[Cockpit.js] 3rd useEffect()');
+
+        const timer=setTimeout(()=>{alert('Saved data to cloud')}, 1000);
+
+        return ()=>{
+            clearTimeout(timer);
+            console.log('[Cockpit.js] 3rd cleanup in useEffect()');};
+
+    },[]);
+
+
+
     let classes1=[];
     let btnClass='';
 
@@ -9,11 +36,11 @@ const Cockpit=(props)=>{
         btnClass=CssClass.MyBtn;
     }
 
-    if(props.persons.length<=2)
+    if(props.personsLength<=2)
     {
         classes1.push(CssClass.red);
     }
-    if(props.persons.length<=1)
+    if(props.personsLength<=1)
     {
         classes1.push(CssClass.bold);//classes2.push('bold');
     }
@@ -30,4 +57,4 @@ const Cockpit=(props)=>{
     );
 };
 
-export default Cockpit;
+export default React.memo(Cockpit);

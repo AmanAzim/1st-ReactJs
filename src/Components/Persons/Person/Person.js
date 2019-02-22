@@ -26,7 +26,7 @@ class Person extends Component{
          <div className={CssClass.Person}>
              <p>I am {this.props.name} and I am {this.props.age} years old</p>
              <p>{this.props.children}</p>
-             <button style={buttonStyle} key={1} onClick={this.props.clickToChange}>Click to change name</button>
+
              <br></br>
              <button style={buttonStyle} key={2} onClick={this.props.clickToDeletePerson}>Click to Delete Person</button>
              <br></br>

@@ -22,6 +22,7 @@ class App extends Component {
       {id:3, name:"Tansen", age:29}
     ],
     showPersons:false,
+    showCockpit:true,
   };
 
   ////Creation LifeCycle Hook 2
@@ -100,13 +101,16 @@ class App extends Component {
     return (
 
             <div className={CssClass.App}>
+                <button onClick={()=>{this.setState({showCockpit:!this.state.showCockpit});}}>Remove Cockpit</button>
 
-                <Cockpit appTitle={this.props.appTitle}
-                         persons={this.state.persons}
-                         showPersons={this.state.showPersons}
-                         togglePerson={this.togglePersonsHandler}
-                         switchName={()=>this.SwitchNameHandler('Azim')}
-                />
+                {this.state.showCockpit ?  (<Cockpit appTitle={this.props.appTitle}
+                                                   personsLength={this.state.persons.length}
+                                                   showPersons={this.state.showPersons}
+                                                   togglePerson={this.togglePersonsHandler}
+                                                   switchName={()=>this.SwitchNameHandler('Azim')}
+                                            /> ): null
+                }
+
 
                 {persons}
 

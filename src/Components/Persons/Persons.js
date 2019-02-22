@@ -12,7 +12,13 @@ class Persons extends Component{
     ////Update LifeCycle Hook 2
     shouldComponentUpdate(nextProps, nextState) {
         console.log('[Persons.js] shouldComponentUpdate()');
-        return true;
+        if(nextProps.persons!==this.props.persons)
+        {
+            return true;
+        }
+        else{
+            return false;
+        }
     }
     ////Update LifeCycle Hook 5
     getSnapshotBeforeUpdate(prevProps, prevState) {
@@ -23,6 +29,11 @@ class Persons extends Component{
     componentDidUpdate(prevProps, prevState, snapShot) {
         console.log('[Persons.js] componentDidUpdate()');
         console.log('[Persons.js] componentDidUpdate()-'+snapShot.message);
+    }
+
+    ////for cleanup work
+    componentWillUnmount() {
+        console.log('[Persons.js] componentWillUnmount()');
     }
 
     render() {
