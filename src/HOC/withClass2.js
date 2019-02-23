@@ -2,7 +2,7 @@ import React from 'react';
 
 const withClass2=(WarppedCopmonent, className)=>{
     return (props)=> ( <div className={className}>
-                           <WarppedCopmonent/>
+                           <WarppedCopmonent {...props}/>
                        </div> );
 };
 

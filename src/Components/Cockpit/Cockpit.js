@@ -1,7 +1,10 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useRef} from 'react';
 import CssClass from "./Cockpit.css";
 
 const Cockpit=(props)=>{
+
+    const buttonRef=useRef(null);
+
     //runs on any update of the component
     useEffect(()=>{
         console.log('[Cockpit.js] 1st useEffect()');
@@ -21,9 +24,12 @@ const Cockpit=(props)=>{
 
         const timer=setTimeout(()=>{alert('Saved data to cloud')}, 1000);
 
+        buttonRef.current.click();
+
         return ()=>{
             clearTimeout(timer);
-            console.log('[Cockpit.js] 3rd cleanup in useEffect()');};
+            console.log('[Cockpit.js] 3rd cleanup in useEffect()');
+        };
 
     },[]);
 
@@ -52,7 +58,9 @@ const Cockpit=(props)=>{
 
             <button  onClick={props.switchName}>Switch Name</button>
             <br></br><br></br>
-            <button className={btnClass} onClick={props.togglePerson}>Toggle Persons</button>
+            <button  className={btnClass} onClick={props.Login}>Login</button>
+            <br></br><br></br>
+            <button ref={buttonRef} className={btnClass} onClick={props.togglePerson}>Toggle Persons</button>
         </div>
     );
 };

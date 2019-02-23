@@ -9,8 +9,8 @@ class Persons extends PureComponent{
         console.log('[Persons.js] getDerivedStateFromProps()');
         return state;
     }
-    ////Update LifeCycle Hook 2
-    shouldComponentUpdate(nextProps, nextState) {
+    ////Update LifeCycle Hook 2 May cause problem when using with PureComponent
+    /*shouldComponentUpdate(nextProps, nextState) {
         console.log('[Persons.js] shouldComponentUpdate()');
        if(nextProps.persons!==this.props.persons)
           {
@@ -19,7 +19,7 @@ class Persons extends PureComponent{
           else{
              return false;
           }
-    }
+    }*/
     ////Update LifeCycle Hook 4
     getSnapshotBeforeUpdate(prevProps, prevState) {
         console.log('[Persons.js] getSnapshotBeforeUpdate()');
@@ -46,6 +46,7 @@ class Persons extends PureComponent{
                                 age={person.age}
                                 clickToDeletePerson={() => {this.props.clickToDelete(index)}}
                                 changedName={(event) => {this.props.changed(event, person.id)}}
+                                isAuth={this.props.isAuthenticated}
                         />
                    </ErrorBoundary>
         });

@@ -25,6 +25,8 @@ class App extends Component {
     ],
     showPersons:false,
     showCockpit:true,
+    changeTrackCouter:0,
+    authenticated:false,
   };
 
   ////Creation LifeCycle Hook 2
@@ -73,7 +75,9 @@ class App extends Component {
     const neWpersons=[...this.state.persons];
     neWpersons[personIndex]=onePerson;
 
-    this.setState({persons:neWpersons});
+    this.setState((prevState, props)=> {
+        return {persons: neWpersons, changeTrackCouter: prevState.changeTrackCouter + 1}
+    });
   };
 
   deletePersonsHandler=(index)=>{
@@ -83,6 +87,11 @@ class App extends Component {
       neWpersons.splice(index, 1);
       this.setState({persons:neWpersons});
   };
+
+  authHandler=()=>{
+      this.setState({ authenticated:true});
+  };
+
   render() {
       ////Creation LifeCycle Hook 3
       console.log('[App.js] render()');
@@ -94,6 +103,7 @@ class App extends Component {
              <Persons persons={this.state.persons}
                       clickToDelete={ (event, index)=>{this.deletePersonsHandler(index)} }
                       changed={(event, person_id)=>{this.ChangeNameHandler(event, person_id)}}
+                      isAuthenticated={this.state.authenticated}
                       />
 
       );
@@ -109,6 +119,7 @@ class App extends Component {
                                                    showPersons={this.state.showPersons}
                                                    togglePerson={this.togglePersonsHandler}
                                                    switchName={()=>this.SwitchNameHandler('Azim')}
+                                                   Login={this.authHandler}
                                             /> ): null
                 }
 

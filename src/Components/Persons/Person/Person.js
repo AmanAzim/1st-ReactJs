@@ -1,11 +1,21 @@
 import React, {Component} from 'react'
 import WithClass from '../../../HOC/WithClass';
 import CssClass from './Person.css'
+import PropTypes from 'prop-types'
 //import Radium from 'radium';
 
 class Person extends Component{
 
- render() {
+ constructor(props){
+     super(props);
+     this.inputElementRef=React.createRef();
+ }
+ componentDidMount() {
+    // this.inputElement.focus();
+     this.inputElementRef.current.focus();
+ }
+
+    render() {
      ////Creation LifeCycle Hook 3.2
      console.log('[Person.js] Rendering...');
 
@@ -24,16 +34,26 @@ class Person extends Component{
          //throw new Error('Something went Wrong Aman!!');
      }
      return( <WithClass ClassCss={CssClass.Person}>
-                 <p key={1}>I am {this.props.name} and I am {this.props.age} years old</p>
-                 <p key={2}>{this.props.children}</p>
-
-                 <br key={3}></br>
-                 <button style={buttonStyle} key={4} onClick={this.props.clickToDeletePerson}>Click to Delete Person</button>
-                 <br key={5}></br>
-                 <input type="text" key={6} onChange={this.props.changedName} value={this.props.name}/>
+                 <p>I am {this.props.name} and I am {this.props.age} years old</p>
+                 <p>{this.props.children}</p>
+                    {this.props.isAuth? <p>Authenticated!</p> : <p>Not Authenticated!</p>}
+                 <br></br>
+                 <button style={buttonStyle} onClick={this.props.clickToDeletePerson}>Click to Delete Person</button>
+                 <br></br>
+                 <input type="text"
+                        onChange={this.props.changedName}
+                        value={this.props.name}
+                        //ref={(inputAl)=>{this.inputElement=inputAl}}
+                        ref={this.inputElementRef}/>
              </WithClass>);
  }
 };
 
 //export default Radium(person);
+Person.propTypes={
+    name:PropTypes.string,
+    age:PropTypes.number,
+    clickToDeletePerson:PropTypes.func,
+    changedName:PropTypes.func,
+};
 export default Person;
