@@ -3,6 +3,7 @@ import React, {PureComponent} from 'react';
 import ErrorBoundary from '../../ErrorBoundary/ErrorBoundary'
 import Person from  './Person/Person'
 
+
 class Persons extends PureComponent{
     ////Update LifeCycle Hook 1
     static getDerivedStateFromProps(props, state){
@@ -41,14 +42,13 @@ class Persons extends PureComponent{
         console.log('[Persons.js] Rendering...');
 
         return this.props.persons.map((person, index) => {
-            return <ErrorBoundary key={person.id}>
-                        <Person name={person.name}
+                  return <ErrorBoundary key={person.id}>
+                            <Person name={person.name}
                                 age={person.age}
                                 clickToDeletePerson={() => {this.props.clickToDelete(index)}}
                                 changedName={(event) => {this.props.changed(event, person.id)}}
-                                isAuth={this.props.isAuthenticated}
-                        />
-                   </ErrorBoundary>
+                            />
+                         </ErrorBoundary>
         });
     }
 };

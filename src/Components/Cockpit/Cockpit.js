@@ -1,5 +1,6 @@
 import React, {useEffect, useRef} from 'react';
 import CssClass from "./Cockpit.css";
+import AuthContex from '../../Contex/Auth-contex'
 
 const Cockpit=(props)=>{
 
@@ -58,7 +59,11 @@ const Cockpit=(props)=>{
 
             <button  onClick={props.switchName}>Switch Name</button>
             <br></br><br></br>
-            <button  className={btnClass} onClick={props.Login}>Login</button>
+
+            <AuthContex.Consumer>
+                {(contex)=> <button  className={btnClass} onClick={contex.Login}>Login</button>}
+            </AuthContex.Consumer>
+
             <br></br><br></br>
             <button ref={buttonRef} className={btnClass} onClick={props.togglePerson}>Toggle Persons</button>
         </div>

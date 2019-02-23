@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import WithClass from '../../../HOC/WithClass';
 import CssClass from './Person.css'
 import PropTypes from 'prop-types'
+import AuthContex from '../../../Contex/Auth-contex'
 //import Radium from 'radium';
 
 class Person extends Component{
@@ -36,7 +37,11 @@ class Person extends Component{
      return( <WithClass ClassCss={CssClass.Person}>
                  <p>I am {this.props.name} and I am {this.props.age} years old</p>
                  <p>{this.props.children}</p>
-                    {this.props.isAuth? <p>Authenticated!</p> : <p>Not Authenticated!</p>}
+
+                 <AuthContex.Consumer>
+                     {(context)=> context.authenticated? <p>Authenticated!</p> : <p>Not Authenticated!</p>}
+                 </AuthContex.Consumer>
+
                  <br></br>
                  <button style={buttonStyle} onClick={this.props.clickToDeletePerson}>Click to Delete Person</button>
                  <br></br>

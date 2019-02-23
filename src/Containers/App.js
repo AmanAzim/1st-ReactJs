@@ -5,6 +5,7 @@ import Persons from '../Components/Persons/Persons';
 import Cockpit from '../Components/Cockpit/Cockpit';
 import Aux from '../HOC/Auxiliary';
 import withClass2 from '../HOC/withClass2';
+import AuthContex from '../Contex/Auth-contex'
 
 import ErrorBoundary from '../ErrorBoundary/ErrorBoundary';
 
@@ -103,7 +104,6 @@ class App extends Component {
              <Persons persons={this.state.persons}
                       clickToDelete={ (event, index)=>{this.deletePersonsHandler(index)} }
                       changed={(event, person_id)=>{this.ChangeNameHandler(event, person_id)}}
-                      isAuthenticated={this.state.authenticated}
                       />
 
       );
@@ -114,16 +114,17 @@ class App extends Component {
             <Aux>
                 <button onClick={()=>{this.setState({showCockpit:!this.state.showCockpit});}}>Remove Cockpit</button>
 
-                {this.state.showCockpit ?  (<Cockpit appTitle={this.props.appTitle}
+                <AuthContex.Provider value={{authenticated:this.state.authenticated, Login:this.authHandler}}>
+                    {this.state.showCockpit ?  (<Cockpit appTitle={this.props.appTitle}
                                                    personsLength={this.state.persons.length}
                                                    showPersons={this.state.showPersons}
                                                    togglePerson={this.togglePersonsHandler}
                                                    switchName={()=>this.SwitchNameHandler('Azim')}
-                                                   Login={this.authHandler}
-                                            /> ): null
-                }
+                                                /> ): null
+                     }
 
-                {persons}
+                    {persons}
+                </AuthContex.Provider>
             </Aux>
     );
     //return React.createElement('div', {className:'App'}, React.createElement('h1', null,'Hi, I\'m a React App'));
