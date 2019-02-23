@@ -6,6 +6,7 @@ import AuthContex from '../../../Contex/Auth-contex'
 //import Radium from 'radium';
 
 class Person extends Component{
+ static contextType=AuthContex;//only Available in Class based Components
 
  constructor(props){
      super(props);
@@ -38,9 +39,7 @@ class Person extends Component{
                  <p>I am {this.props.name} and I am {this.props.age} years old</p>
                  <p>{this.props.children}</p>
 
-                 <AuthContex.Consumer>
-                     {(context)=> context.authenticated? <p>Authenticated!</p> : <p>Not Authenticated!</p>}
-                 </AuthContex.Consumer>
+                 {this.context.authenticated? <p>Authenticated!</p> : <p>Not Authenticated!</p>}
 
                  <br></br>
                  <button style={buttonStyle} onClick={this.props.clickToDeletePerson}>Click to Delete Person</button>

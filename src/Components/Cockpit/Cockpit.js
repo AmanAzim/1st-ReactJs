@@ -1,10 +1,12 @@
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect, useRef, useContext} from 'react';
 import CssClass from "./Cockpit.css";
 import AuthContex from '../../Contex/Auth-contex'
 
 const Cockpit=(props)=>{
 
     const buttonRef=useRef(null);
+
+    const authContext=useContext(AuthContex);
 
     //runs on any update of the component
     useEffect(()=>{
@@ -63,6 +65,8 @@ const Cockpit=(props)=>{
             <AuthContex.Consumer>
                 {(contex)=> <button  className={btnClass} onClick={contex.Login}>Login</button>}
             </AuthContex.Consumer>
+
+            <button  className={btnClass} onClick={authContext.Login}>Login (useContext()-Hook)</button>
 
             <br></br><br></br>
             <button ref={buttonRef} className={btnClass} onClick={props.togglePerson}>Toggle Persons</button>
