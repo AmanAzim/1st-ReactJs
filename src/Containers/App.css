@@ -2,3 +2,11 @@
   text-align: center;
 }
 
+.red {
+  background: red;
+  color: orange;
+}
+.green {
+  background: green;
+  color: red;
+}

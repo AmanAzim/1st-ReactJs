@@ -6,6 +6,7 @@ import Cockpit from '../Components/Cockpit/Cockpit';
 import Aux from '../HOC/Auxiliary';
 import withClass2 from '../HOC/withClass2';
 import AuthContex from '../Contex/Auth-contex'
+import BindTest from '../Components/BindTest';
 
 import ErrorBoundary from '../ErrorBoundary/ErrorBoundary';
 
@@ -28,6 +29,7 @@ class App extends Component {
     showCockpit:true,
     changeTrackCouter:0,
     authenticated:false,
+    mouse:'',
   };
 
   ////Creation LifeCycle Hook 2
@@ -93,6 +95,15 @@ class App extends Component {
       this.setState({ authenticated:true});
   };
 
+    handleMouse=(id)=>{
+        if(id===1){
+            this.setState({mouse:'MouseUp'})
+        }if(id===2){
+            this.setState({mouse:'MouseDown'})
+        }
+
+    }
+
   render() {
       ////Creation LifeCycle Hook 3
       console.log('[App.js] render()');
@@ -125,6 +136,7 @@ class App extends Component {
 
                     {persons}
                 </AuthContex.Provider>
+                <BindTest/>
             </Aux>
     );
     //return React.createElement('div', {className:'App'}, React.createElement('h1', null,'Hi, I\'m a React App'));
