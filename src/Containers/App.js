@@ -30,6 +30,7 @@ class App extends Component {
     changeTrackCouter:0,
     authenticated:false,
     mouse:'',
+    counter:0
   };
 
   ////Creation LifeCycle Hook 2
@@ -95,15 +96,11 @@ class App extends Component {
       this.setState({ authenticated:true});
   };
 
-    handleMouse=(id)=>{
-        if(id===1){
-            this.setState({mouse:'MouseUp'})
-        }if(id===2){
-            this.setState({mouse:'MouseDown'})
-        }
-
-    }
-
+  myFun=()=>{
+      const c={name:'Aman'};
+      c.name='Roza';
+      console.log('c', c);
+  }
   render() {
       ////Creation LifeCycle Hook 3
       console.log('[App.js] render()');
@@ -136,7 +133,10 @@ class App extends Component {
 
                     {persons}
                 </AuthContex.Provider>
-                <BindTest/>
+
+                {this.state.counter}
+                <button onClick={()=>this.myFun()}>Click to log</button>
+                <BindTest test="fromParent"/>
             </Aux>
     );
     //return React.createElement('div', {className:'App'}, React.createElement('h1', null,'Hi, I\'m a React App'));

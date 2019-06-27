@@ -25,7 +25,7 @@ const Cockpit=(props)=>{
     useEffect(()=>{
         console.log('[Cockpit.js] 3rd useEffect()');
 
-        const timer=setTimeout(()=>{alert('Saved data to cloud')}, 1000);
+        const timer=setTimeout(()=>{/*alert('Saved data to cloud')*/}, 1000);
 
         buttonRef.current.click();
 

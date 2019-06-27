@@ -1,66 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6a58cc8a-991a-4070-bb80-48f2d0dd3165" name="Default Changelist" comment="&quot;commit&quot;">
-      <change afterPath="$PROJECT_DIR$/src/Components/BindTest.js" afterDir="false" />
+    <list default="true" id="6a58cc8a-991a-4070-bb80-48f2d0dd3165" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/RenderPopsDemo/BigBrother.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/RenderPopsDemo/LittleSister.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/RenderPopsDemo/RenderPropsDemo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/react-scripts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/prop-types/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/prop-types/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-is/build-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/react-is/build-info.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-is/cjs/react-is.development.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/react-is/cjs/react-is.development.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-is/cjs/react-is.production.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/react-is/cjs/react-is.production.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-is/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/react-is/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-is/umd/react-is.development.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/react-is/umd/react-is.development.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-is/umd/react-is.production.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/react-is/umd/react-is.production.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-scripts/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-scripts/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-scripts/bin/react-scripts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-scripts/config/env.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-scripts/config/jest/babelTransform.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-scripts/config/jest/cssTransform.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-scripts/config/jest/fileTransform.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-scripts/config/paths.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-scripts/config/webpack.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-scripts/config/webpackDevServer.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-scripts/lib/react-app.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-scripts/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-scripts/scripts/build.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-scripts/scripts/eject.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-scripts/scripts/init.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-scripts/scripts/start.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-scripts/scripts/test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-scripts/scripts/utils/createJestConfig.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-scripts/scripts/utils/verifyPackageTree.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-scripts/scripts/utils/verifyTypeScriptSetup.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-scripts/template-typescript/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-scripts/template-typescript/gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-scripts/template-typescript/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-scripts/template-typescript/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-scripts/template-typescript/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-scripts/template-typescript/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-scripts/template-typescript/src/App.test.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-scripts/template-typescript/src/App.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-scripts/template-typescript/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-scripts/template-typescript/src/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-scripts/template-typescript/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-scripts/template-typescript/src/serviceWorker.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-scripts/template/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-scripts/template/gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-scripts/template/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-scripts/template/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-scripts/template/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-scripts/template/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-scripts/template/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-scripts/template/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-scripts/template/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-scripts/template/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-scripts/template/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-scripts/template/src/serviceWorker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Containers/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Containers/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/BindTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/BindTest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Cockpit/Cockpit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Cockpit/Cockpit.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Containers/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Containers/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -73,8 +21,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Containers/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="138" column="27" selection-start-line="138" selection-start-column="27" selection-end-line="138" selection-end-column="27" />
+            <state relative-caret-position="469">
+              <caret line="138" column="45" selection-start-line="138" selection-start-column="45" selection-end-line="138" selection-end-column="45" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -82,11 +30,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Components/BindTest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-100">
-              <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+            <state relative-caret-position="-1491">
+              <caret line="3" column="64" selection-start-line="3" selection-start-column="64" selection-end-line="3" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/RenderPopsDemo/RenderPropsDemo.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="8" column="102" selection-start-line="8" selection-start-column="102" selection-end-line="8" selection-end-column="102" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -95,19 +52,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Containers/App.css">
+        <entry file="file://$PROJECT_DIR$/src/RenderPopsDemo/BigBrother.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="4" selection-start-line="4" selection-end-line="12" />
+            <state relative-caret-position="160">
+              <caret line="8" column="16" lean-forward="true" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/index.css">
+        <entry file="file://$PROJECT_DIR$/src/RenderPopsDemo/LittleSister.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="100">
+              <caret line="5" column="172" selection-start-line="5" selection-start-column="172" selection-end-line="5" selection-end-column="172" />
             </state>
           </provider>
         </entry>
@@ -133,8 +90,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Components/Cockpit/Cockpit.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1200">
-              <caret line="62" column="30" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
+            <state relative-caret-position="540">
+              <caret line="27" column="68" selection-start-line="27" selection-start-column="68" selection-end-line="27" selection-end-column="68" />
               <folding>
                 <element signature="e#0#59#0" expanded="true" />
               </folding>
@@ -177,11 +134,14 @@
         <option value="$PROJECT_DIR$/src/Contex/Auth-contex.js" />
         <option value="$PROJECT_DIR$/src/Components/Persons/Persons.js" />
         <option value="$PROJECT_DIR$/src/Components/Persons/Person/Person.js" />
-        <option value="$PROJECT_DIR$/src/Components/Cockpit/Cockpit.js" />
-        <option value="$PROJECT_DIR$/src/Containers/App.js" />
         <option value="$PROJECT_DIR$/src/Containers/App.css" />
         <option value="$PROJECT_DIR$/src/index.css" />
+        <option value="$PROJECT_DIR$/src/Components/Cockpit/Cockpit.js" />
         <option value="$PROJECT_DIR$/src/Components/BindTest.js" />
+        <option value="$PROJECT_DIR$/src/Containers/App.js" />
+        <option value="$PROJECT_DIR$/src/RenderPopsDemo/LittleSister.js" />
+        <option value="$PROJECT_DIR$/src/RenderPopsDemo/BigBrother.js" />
+        <option value="$PROJECT_DIR$/src/RenderPopsDemo/RenderPropsDemo.js" />
       </list>
     </option>
   </component>
@@ -197,6 +157,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -239,17 +200,22 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="HOC" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="1st-react" type="b2602c69:ProjectViewProjectNode" />
+              <item name="1st-react" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="RenderPopsDemo" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../e-commerce-project-react-contexAPI" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -308,7 +274,14 @@
       <workItem from="1557244035779" duration="283000" />
       <workItem from="1557244517535" duration="243000" />
       <workItem from="1557325520749" duration="63000" />
-      <workItem from="1560841338380" duration="7270000" />
+      <workItem from="1560841338380" duration="7300000" />
+      <workItem from="1561129038808" duration="831000" />
+      <workItem from="1561129905741" duration="5000" />
+      <workItem from="1561135810997" duration="6105000" />
+      <workItem from="1561150086357" duration="2740000" />
+      <workItem from="1561211231228" duration="910000" />
+      <workItem from="1561581975205" duration="167000" />
+      <workItem from="1561591610487" duration="3009000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;commit&quot;">
       <created>1550540350625</created>
@@ -457,16 +430,23 @@
       <option name="project" value="LOCAL" />
       <updated>1550888837041</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="&quot;commit&quot;">
+      <created>1560851906131</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1560851906131</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="139713000" />
+    <option name="totallyTimeSpent" value="153510000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33736762" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18456884" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -479,7 +459,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.060556464" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.39443535" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -632,30 +612,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HOC/Auxiliary.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HOC/WithClass.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Cockpit/Cockpit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1200">
-          <caret line="62" column="30" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Persons/Person/Person.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -673,13 +629,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Containers/App.js">
+    <entry file="file://$PROJECT_DIR$/src/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="138" column="27" selection-start-line="138" selection-start-column="27" selection-end-line="138" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="460">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
@@ -690,17 +643,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.css">
+    <entry file="file://$PROJECT_DIR$/src/HOC/Auxiliary.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="100">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HOC/WithClass.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Cockpit/Cockpit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="27" column="68" selection-start-line="27" selection-start-column="68" selection-end-line="27" selection-end-column="68" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/BindTest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-100">
-          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+        <state relative-caret-position="-1491">
+          <caret line="3" column="64" selection-start-line="3" selection-start-column="64" selection-end-line="3" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Containers/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="138" column="45" selection-start-line="138" selection-start-column="45" selection-end-line="138" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RenderPopsDemo/BigBrother.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="16" lean-forward="true" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RenderPopsDemo/LittleSister.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="172" selection-start-line="5" selection-start-column="172" selection-end-line="5" selection-end-column="172" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RenderPopsDemo/RenderPropsDemo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="102" selection-start-line="8" selection-start-column="102" selection-end-line="8" selection-end-column="102" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
